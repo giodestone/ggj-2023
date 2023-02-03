@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
-	public Transform target;
-	public float smoothing = 5f;
-	Vector3 offset;
+[SerializeField] public GameObject player;
+    [SerializeField] private float offset;
 
-	// Use this for initialization
-	void Start()
-	{
-		offset = transform.position - target.position;
-	}
 
-	// Update is called once per frame
-	void LateUpdate()
-	{
-		Vector3 targetCamPos = target.position + offset;
-		transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing);
-	}
+    // Update is called once per frame
+    void LateUpdate()
+    {
+        //If player is connected
+        if (player)
+        {
+            //Follow player
+            transform.position = player.transform.position;
+            transform.Translate(Vector3.forward * -offset);
+        }
+    }
 }
