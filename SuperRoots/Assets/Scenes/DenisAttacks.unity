@@ -209,6 +209,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6248271650011431256, guid: cbe35bc2a9fa9614b9b028c81eff04a7, type: 3}
+      propertyPath: m_TagString
+      value: garlic
+      objectReference: {fileID: 0}
     - target: {fileID: 6248271650011431261, guid: cbe35bc2a9fa9614b9b028c81eff04a7, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -853,7 +857,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8168646336909268386, guid: 83d6633e467fb7f449d2f97df013db3c, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168646336909268386, guid: 83d6633e467fb7f449d2f97df013db3c, type: 3}
+      propertyPath: m_TagString
+      value: snips
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168646336909268396, guid: 83d6633e467fb7f449d2f97df013db3c, type: 3}
+      propertyPath: looping
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168646336909268396, guid: 83d6633e467fb7f449d2f97df013db3c, type: 3}
+      propertyPath: lengthInSec
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8168646336909268396, guid: 83d6633e467fb7f449d2f97df013db3c, type: 3}
       propertyPath: playOnAwake
@@ -862,6 +878,10 @@ PrefabInstance:
     - target: {fileID: 8168646336909268396, guid: 83d6633e467fb7f449d2f97df013db3c, type: 3}
       propertyPath: TriggerModule.enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168646336909268396, guid: 83d6633e467fb7f449d2f97df013db3c, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8168646336909268396, guid: 83d6633e467fb7f449d2f97df013db3c, type: 3}
       propertyPath: TriggerModule.primitives.Array.size
@@ -1136,7 +1156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1491738204
 Transform:
   m_ObjectHideFlags: 0

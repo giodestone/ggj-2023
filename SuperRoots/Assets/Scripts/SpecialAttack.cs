@@ -7,6 +7,7 @@ public class SpecialAttack : MonoBehaviour
     public ParticleSystem parsnipAttack;
     public GameObject singleParsnip;
     public static Transform target;
+    bool canSnip = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,12 +17,12 @@ public class SpecialAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if (Input.GetKey(KeyCode.F))
+       if (Input.GetKey(KeyCode.F) && canSnip)
         {
-            singleParsnip.gameObject.SetActive(true);
-          //  singleParsnip.transform.position = transform.position;
-           // parsnipAttack.Play();
+            // singleParsnip.gameObject.SetActive(true);
+            // singleParsnip.transform.position = transform.position;
 
+            StartCoroutine(snipOut());
         }
 
 
@@ -35,5 +36,14 @@ public class SpecialAttack : MonoBehaviour
             print("woo");
             target = other.transform;
         }
+    }
+
+    IEnumerator snipOut()
+    {
+        parsnipAttack.Play();
+        canSnip = false;
+        yield return new WaitForSeconds(5);
+        canSnip = true;
+
     }
 }
