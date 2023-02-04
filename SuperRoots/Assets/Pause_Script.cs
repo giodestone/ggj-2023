@@ -22,6 +22,15 @@ public class Pause_Script : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Pause_Menu.SetActive(!Pause_Menu.activeSelf);
+            if (Pause_Menu.activeSelf)
+            {
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
         }
+        
     }
 }
